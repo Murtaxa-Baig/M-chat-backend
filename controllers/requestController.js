@@ -76,7 +76,7 @@ export const request = {
   },
   getReceivedRequests: async (req, res) => {
     try {
-      const { id } = req.body;
+      const { id } = req.params;
 
       const requests = await Request.find({
         receiver: id,
